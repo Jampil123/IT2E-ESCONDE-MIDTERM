@@ -15,12 +15,12 @@ public class Esconde_IT2E_Lab_test {
         System.out.print("Enter the test date (YYYY-MM-DD): ");
         String date = sc.nextLine(); 
         System.out.print("Enter the test result: ");
-        String result = sc.nextLine(); 
+        String res = sc.nextLine(); 
         
         String sql = "INSERT INTO labtest (test_name, test_date, test_result) VALUES (?, ?, ?)";
 
 
-        conf.addRecord(sql, name, date, result);
+        conf.addRecord(sql, name, date, res);
     }
      
     private void viewLabtest() {
