@@ -47,7 +47,18 @@ public class Esconde_IT2E_Lab_test {
         config conf = new config();
         conf.updateRecord( name, date, result);
 }
-   
+       public void deleteLabtest(){
+        Scanner s = new Scanner(System.in);
+       
+        System.out.print("Enter ID to Delete: ");
+        int id = s.nextInt();
+        
+        String qry = "DELETE FROM labtest WHERE test_id = ?";
+        
+        config conf = new config();
+        conf.deleteRecord(qry, id);
+                
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int action;
@@ -79,7 +90,7 @@ public class Esconde_IT2E_Lab_test {
                     break;
 
                 case 4:
-                    
+                    test.deleteLabtest();
                     break;
 
                 case 5:
